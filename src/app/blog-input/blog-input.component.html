@@ -1,0 +1,9 @@
+<div class="wrapper">
+
+    <label for="">Blog Input</label>
+    <div>
+        <input [(ngModel)]="title" type="text" placeholder="Title">
+        <input [(ngModel)]="body" type="textarea" placeholder="Body">
+        <input type="submit" (click)="SendToFirebase()">
+    </div>
+</div>
