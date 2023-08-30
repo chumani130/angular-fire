@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-fireman-205d1": {
+      "hosting": {
+        "angular-fire": [
+          "angular-fireman-205d1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-fireman-205d1"
+  }
+}
