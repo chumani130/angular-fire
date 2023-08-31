@@ -44,7 +44,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     provideStorage(() => getStorage()),
     FormsModule,
     AngularFireModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
