@@ -40,4 +40,5 @@ export class BlogInputComponent implements OnInit {
     this.firestore.collection("Blogs").doc(this.title).set(blog)
   }
 
+
 }
