@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ContactService } from '../contact.service';
 
 export interface blog{title: any; body: any}
 
@@ -12,7 +13,8 @@ export class BlogInputComponent implements OnInit {
   
 
   constructor(
-    private firestore: AngularFirestore
+    private firestore: AngularFirestore,
+    private contactService: ContactService
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,9 @@ export class BlogInputComponent implements OnInit {
     //collect inputs
     const title: any = this.title;
     const body: any = this.body;
+    this.contactService.addNewUser(title,body);
+
+    console.log(this.contactService.addNewUser(title,body))
 
     console.log(title)
     console.log(body)
@@ -33,7 +38,6 @@ export class BlogInputComponent implements OnInit {
     //send input
     const blog: blog={title,body}
     this.firestore.collection("Blogs").doc(this.title).set(blog)
-
   }
 
 }
